@@ -1,0 +1,26 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25/07/2021, 01:43:23 PM
+    Author     : Ruder Palencia (Geko)
+*/ 
+
+.btnhover{
+    -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,
+        1.5);
+    -fx-cursor: hand;
+}
+.btnhover:hover{
+    -fx-background-color: #009966;
+    -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,
+        1.5);
+    -fx-cursor: hand;
+}
+.cajalogin{ 
+
+    -fx-border-radius: 14px 22px 0px 13px;
+    -fx-border-color: #1C6EA4;
+}

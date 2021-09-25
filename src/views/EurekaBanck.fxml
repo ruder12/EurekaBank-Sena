@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bp" prefHeight="645.0" prefWidth="925.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EurekaBanckController">
+   <left>
+      <VBox alignment="TOP_CENTER" opacity="0.9" prefHeight="330.0" prefWidth="196.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="209.0" text="EurekBank" textAlignment="CENTER">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../utils/img/user_menu.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="namerol" alignment="CENTER" prefHeight="42.0" prefWidth="212.0" textFill="#222121">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <JFXButton fx:id="btnmenu" onAction="#actmenu" prefHeight="44.0" prefWidth="209.0" styleClass="btnhover" stylesheets="@../EurekaBanck/styles.css" text="Menu Principal" />
+            <Label prefHeight="25.0" prefWidth="209.0" />
+            <JFXButton fx:id="btnsucursal" onAction="#actsucursales" prefHeight="47.0" prefWidth="209.0" styleClass="btnhover" stylesheets="@../EurekaBanck/styles.css" text="Sucursales" />
+            <Label prefHeight="17.0" prefWidth="208.0" />
+            <JFXButton fx:id="btnempleados" onAction="#actEmpleado" prefHeight="46.0" prefWidth="245.0" styleClass="btnhover" stylesheets="@../EurekaBanck/styles.css" text="Empleados" />
+            <Label prefHeight="17.0" prefWidth="213.0" />
+            <JFXButton fx:id="btngestioncuentas" onAction="#actgestioncuentas" prefHeight="47.0" prefWidth="217.0" styleClass="btnhover" stylesheets="@../EurekaBanck/styles.css" text="Gestion de Cuentas" />
+            <Label prefHeight="17.0" prefWidth="213.0" />
+            <JFXButton fx:id="btnconfiguraciones" onAction="#btnconfiguracionesAction" prefHeight="59.0" prefWidth="196.0" styleClass="btnhover" stylesheets="@../EurekaBanck/styles.css" text="Configuraciones" />
+            <Label fx:id="labelidrols" prefHeight="25.0" prefWidth="102.0" visible="false" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <Pane fx:id="paneles" prefHeight="330.0" prefWidth="121.0" style="-fx-background-color: #34495E;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="7.0" layoutY="6.0" prefHeight="43.0" prefWidth="612.0" text="Menu Principal" textFill="#eee9e9">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="437.0" fitWidth="539.0" layoutX="153.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../utils/img/bank-emoji.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="123.0" layoutY="593.0" prefHeight="38.0" prefWidth="579.0" text="Proyecto de Clase EurekBank @Ruderney Palencia Cardenas" textFill="#eeecec">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelmsj" alignment="CENTER" layoutX="6.0" layoutY="524.0" prefHeight="37.0" prefWidth="721.0" text="Bienvenido" textFill="#ebe2e2">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </center>
+</BorderPane>

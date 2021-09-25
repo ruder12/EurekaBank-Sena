@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controller.ModalCiudadesController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Pane prefHeight="166.0" prefWidth="600.0">
+               <children>
+                  <JFXTextField fx:id="nombreciudad" labelFloat="true" layoutX="88.0" layoutY="78.0" onKeyTyped="#nombreciudadAction" prefHeight="33.0" prefWidth="267.0" promptText="Nombre Ciudad">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label alignment="CENTER" layoutX="36.0" layoutY="6.0" prefHeight="40.0" prefWidth="507.0" text="Ciudades">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fx:id="close" glyphName="CLOSE" layoutX="574.0" layoutY="30.0" onMouseClicked="#closecliken" size="30" />
+                  <JFXButton fx:id="btnagregar" buttonType="RAISED" layoutX="385.0" layoutY="81.0" onAction="#btnagregarAction" prefHeight="30.0" prefWidth="72.0" style="-fx-background-color: #34495E;" text="Agregar" textFill="#f5efef">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <TableView fx:id="tablepaises" prefHeight="178.0" prefWidth="500.0">
+              <columns>
+                <TableColumn fx:id="idpais" prefWidth="136.0" text="ID" />
+                <TableColumn fx:id="pais" editable="false" prefWidth="451.0" resizable="false" text="PAIS" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="293.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModalVistaAsignarDireccionescliController">
+   <children>
+      <VBox prefHeight="303.0" prefWidth="601.0">
+         <children>
+            <Pane prefHeight="153.0" prefWidth="601.0">
+               <children>
+                  <JFXTextField fx:id="txtvias" editable="false" labelFloat="true" layoutX="14.0" layoutY="57.0" prefHeight="32.0" prefWidth="106.0" promptText="via" unFocusColor="#282727" />
+                  <JFXTextField fx:id="numeroprincipal" labelFloat="true" layoutX="120.0" layoutY="57.0" onKeyTyped="#numeroprincipal" prefHeight="32.0" prefWidth="44.0" promptText="#" unFocusColor="#f21b1b">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label layoutX="201.0" layoutY="74.0" text="#">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtnumerosegundario" labelFloat="true" layoutX="209.0" layoutY="64.0" onKeyTyped="#txtnumerosegundario" prefHeight="25.0" prefWidth="32.0" promptText="#" unFocusColor="#d71818" />
+                  <JFXTextField fx:id="txtbarrio_localida" labelFloat="true" layoutX="438.0" layoutY="62.0" onKeyTyped="#validbarrio" prefHeight="25.0" prefWidth="158.0" promptText="Barrio / localidad" unFocusColor="#d71616" />
+                  <JFXTextField fx:id="txtopciones" labelFloat="true" layoutX="164.0" layoutY="64.0" onKeyTyped="#txtopciones" prefHeight="13.0" prefWidth="32.0" promptText="A-Z" unFocusColor="#d70b0b" />
+                  <Label layoutX="1.0" layoutY="135.0" prefHeight="17.0" prefWidth="421.0" text="EJ:  Carrera  45a  #58-12 Apt 205 Br San Alonso" textFill="#948f8f">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labeltipovivineda" layoutX="285.0" layoutY="65.0" prefHeight="25.0" prefWidth="94.0" textAlignment="CENTER" />
+                  <JFXTextField fx:id="txtnumerovivienda" labelFloat="true" layoutX="377.0" layoutY="62.0" onKeyTyped="#txtnumerovivienda" prefHeight="25.0" prefWidth="44.0" promptText="#" unFocusColor="#d30f0f" />
+                  <Label fx:id="br" layoutX="424.0" layoutY="75.0" text="Br." />
+                  <JFXButton fx:id="btnenviar" buttonType="RAISED" layoutX="455.0" layoutY="14.0" onAction="#btnenviar" prefHeight="29.0" prefWidth="121.0" style="-fx-background-color: #239B56;" text="Enviar y Cerrar" textFill="#f2eaea">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <FontAwesomeIconView fx:id="info" fill="#1972b2" glyphName="INFO_CIRCLE" layoutX="561.0" layoutY="137.0" onMouseClicked="#info" size="30" />
+                  <Label layoutX="13.0" layoutY="93.0" prefHeight="17.0" prefWidth="543.0" text="1                                     2               3                     4                              5                           6                        7" textFill="#868484">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btncerrar" buttonType="RAISED" layoutX="10.0" layoutY="16.0" onAction="#btncerrarAction" prefHeight="29.0" prefWidth="78.0" style="-fx-background-color: #E53935;" text="Cancelar" textFill="#ebe9e9">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="114.0" layoutY="22.0" prefHeight="25.0" prefWidth="309.0" text=" Nota : solo Escribir en lo campos con linea en rojo" textFill="#c33434" />
+                  <JFXTextField fx:id="txtnumerosegundario1" labelFloat="true" layoutX="253.0" layoutY="65.0" onKeyTyped="#txtnumerosegundario1" prefHeight="20.0" prefWidth="32.0" promptText="#" unFocusColor="#d71818" />
+                  <JFXTextField fx:id="txtotrasopciones" labelFloat="true" layoutX="12.0" layoutY="110.0" onKeyTyped="#validbarrio" prefHeight="25.0" prefWidth="456.0" promptText="Direcciones Extras" unFocusColor="#d71616" />
+                  <Label layoutX="245.0" layoutY="69.0" text="-" />
+               </children>
+            </Pane>
+            <HBox prefHeight="135.0" prefWidth="601.0">
+               <children>
+                  <VBox prefHeight="130.0" prefWidth="601.0">
+                     <children>
+                        <HBox prefHeight="11.0" prefWidth="601.0">
+                           <children>
+                              <JFXButton fx:id="diagonal" buttonType="RAISED" onAction="#diagonalAction" prefHeight="25.0" prefWidth="141.0" style="-fx-background-color: #fff;" text="Diagonal">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></JFXButton>
+                              <JFXButton fx:id="bulevar" buttonType="RAISED" onAction="#bulevarAction" prefHeight="25.0" prefWidth="144.0" style="-fx-background-color: #fff;" text="Bulevar">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></JFXButton>
+                              <JFXButton fx:id="esquina" buttonType="RAISED" onAction="#esquinaAction" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #fff;" text="Esquina">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></JFXButton>
+                              <JFXButton fx:id="calleavenida" buttonType="RAISED" onAction="#calleavenidaAction" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: #fff;" text="Calle Avenida">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></JFXButton>
+                              <JFXButton fx:id="autopista" buttonType="RAISED" onAction="#autopistaAction" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #fff;" text="Autopista">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></JFXButton>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="34.0" prefWidth="601.0">
+                           <children>
+                              <JFXButton fx:id="calle" buttonType="RAISED" onAction="#calleAction" prefHeight="29.0" prefWidth="88.0" style="-fx-background-color: #fff;" text="Calle">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></JFXButton>
+                              <JFXButton fx:id="avenidaCarerra" buttonType="RAISED" onAction="#avenidaCarerraAction" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #fff;" text="Avenida Carrera">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></JFXButton>
+                              <JFXButton fx:id="carrera" buttonType="RAISED" onAction="#carreraAction" prefHeight="29.0" prefWidth="78.0" style="-fx-background-color: #fff;" text="Carrera">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></JFXButton>
+                              <JFXButton fx:id="transversal" buttonType="RAISED" onAction="#tranversalAction" prefHeight="29.0" prefWidth="111.0" style="-fx-background-color: #fff;" text="Transversal">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></JFXButton>
+                              <JFXButton fx:id="avenida" buttonType="RAISED" onAction="#avenidaAction" prefHeight="29.0" prefWidth="82.0" style="-fx-background-color: #fff;" text="Avenida">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></JFXButton>
+                              <JFXButton fx:id="conjunto1" buttonType="RAISED" layoutX="455.0" layoutY="10.0" onAction="#conjunto1" prefHeight="29.0" prefWidth="130.0" style="-fx-background-color: #fff;" text="Conjunto">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <Label prefHeight="17.0" prefWidth="613.0" text="Tipo Vivienda" />
+                        <HBox prefHeight="35.0" prefWidth="601.0">
+                           <children>
+                              <JFXButton fx:id="casa" buttonType="RAISED" onAction="#casaAction" prefHeight="25.0" prefWidth="141.0" style="-fx-background-color: #fff;" text="Casa">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></JFXButton>
+                              <JFXButton fx:id="apt" buttonType="RAISED" onAction="#aptAction" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: #fff;" text="Apt">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></JFXButton>
+                              <JFXButton fx:id="finca" buttonType="RAISED" onAction="#fincaAction" prefHeight="25.0" prefWidth="106.0" style="-fx-background-color: #fff;" text="Finca">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></JFXButton>
+                              <JFXButton fx:id="parcela" buttonType="RAISED" onAction="#parcela" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: #fff;" text="Parcela">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></JFXButton>
+                              <JFXButton fx:id="conjunto" buttonType="RAISED" onAction="#conjuntoAction" prefHeight="25.0" prefWidth="158.0" style="-fx-background-color: #fff;" text="Conjunto">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

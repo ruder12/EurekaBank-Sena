@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="371.0" prefWidth="330.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModalCrearCuentaController">
+   <children>
+      <VBox layoutX="9.0" layoutY="-2.0" prefHeight="417.0" prefWidth="315.0" spacing="20.0">
+         <children>
+            <HBox prefHeight="54.0" prefWidth="315.0">
+               <children>
+                  <Label fx:id="tipoempleado" prefHeight="49.0" prefWidth="44.0" visible="false" />
+                  <Label alignment="CENTER" prefHeight="55.0" prefWidth="315.0" style="-fx-font-size: 25px;" text="Crear Cuenta" />
+               </children>
+            </HBox>
+            <JFXTextField fx:id="txtnumCuenta" editable="false" labelFloat="true" onKeyTyped="#validtxtnumCuenta" prefHeight="45.0" prefWidth="392.0" promptText="Numero Cuenta" />
+            <JFXComboBox fx:id="comboMoneda" focusColor="#3f3f40" labelFloat="true" prefHeight="44.0" prefWidth="348.0" promptText="Moneda" unFocusColor="#2c2b2b" />
+            <JFXTextField fx:id="txtsaldoinicial" labelFloat="true" onMouseExited="#mouseexit" prefHeight="45.0" prefWidth="291.0" promptText="Saldo Inicial ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></JFXTextField>
+            <JFXPasswordField fx:id="password" labelFloat="true" onKeyTyped="#validpass" prefHeight="44.0" prefWidth="315.0" promptText="Contraseña">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></JFXPasswordField>
+            <HBox prefHeight="74.0" prefWidth="315.0" spacing="10.0">
+               <children>
+                  <JFXButton fx:id="btnCrear" buttonType="RAISED" onAction="#btnCrearAction" prefHeight="39.0" prefWidth="259.0" style="-fx-background-color: #28B463;" text="Crear" />
+               </children>
+               <padding>
+                  <Insets left="20.0" top="15.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

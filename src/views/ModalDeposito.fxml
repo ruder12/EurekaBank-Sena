@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="221.0" prefWidth="366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModalDepositoController">
+   <children>
+      <VBox prefHeight="259.0" prefWidth="365.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="453.0" text="Deposito">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="219.0" prefWidth="365.0">
+               <children>
+                  <JFXTextField fx:id="NumCuenta" editable="false" focusColor="#393939" labelFloat="true" layoutX="65.0" layoutY="29.0" prefHeight="39.0" prefWidth="235.0" promptText="Numero de La Cuenta" unFocusColor="#171717">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="btnguardar" buttonType="RAISED" layoutX="48.0" layoutY="158.0" onAction="#btnguardarAction" prefHeight="39.0" prefWidth="269.0" ripplerFill="#313132" style="-fx-background-color: #1E8449;" text="Aceptar">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXTextField fx:id="deposito" focusColor="#4d4e51" labelFloat="true" layoutX="65.0" layoutY="87.0" onKeyTyped="#validdeposito" onMouseExited="#mouseexit" prefHeight="48.0" prefWidth="235.0" promptText="Monto a Depositar">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

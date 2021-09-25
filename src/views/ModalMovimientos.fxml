@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="323.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModalMovimientosController">
+   <children>
+      <VBox prefHeight="328.0" prefWidth="600.0">
+         <children>
+            <Pane prefHeight="75.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="25.0" layoutY="38.0" prefHeight="34.0" prefWidth="73.0" text="Cuenta: ">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="NumCuenta" layoutX="113.0" layoutY="38.0" prefHeight="34.0" prefWidth="280.0" textFill="#363535">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fx:id="cerrar" glyphName="CLOSE" layoutX="574.0" layoutY="18.0" onMouseClicked="#cerrarclick" size="25" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="81.0" layoutY="-2.0" prefHeight="33.0" prefWidth="438.0" text="Movimientos " textFill="#3c3b3b">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <TableView fx:id="tableviewsmovi" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="descripcion" prefWidth="176.0" text="DESCRIPCION" />
+                  <TableColumn fx:id="accion" prefWidth="117.0" text="ACCION" />
+                  <TableColumn fx:id="fecha" minWidth="0.0" prefWidth="109.0" text="FECHA" />
+                  <TableColumn fx:id="importe" prefWidth="98.0" text="IMPORTE" />
+                  <TableColumn fx:id="cuentareferencia" prefWidth="98.0" text="C. REFERENCIA" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

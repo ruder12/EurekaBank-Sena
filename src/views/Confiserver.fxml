@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConfiserverController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Pane prefHeight="104.0" prefWidth="516.0">
+               <children>
+                  <Label layoutX="171.0" layoutY="22.0" prefHeight="39.0" prefWidth="258.0" text="Configurar Servidor">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fx:id="cerrar" glyphName="CLOSE" layoutX="574.0" layoutY="26.0" onMouseClicked="#cerrar" size="30" />
+               </children>
+            </Pane>
+            <HBox prefHeight="297.0" prefWidth="554.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField fx:id="namebd" labelFloat="true" layoutX="10.0" layoutY="32.0" prefHeight="39.0" prefWidth="180.0" promptText="Base de Datos">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="297.0" prefWidth="401.0">
+                     <children>
+                        <JFXTextField fx:id="host" labelFloat="true" layoutX="28.0" layoutY="47.0" prefHeight="39.0" prefWidth="164.0" promptText="Host / IP Server">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="BDuser" labelFloat="true" layoutX="28.0" layoutY="118.0" prefHeight="39.0" prefWidth="164.0" promptText="Usuario">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton fx:id="guardarcredenciales" buttonType="RAISED" layoutX="36.0" layoutY="213.0" onAction="#guardarcredencialesAction" prefHeight="39.0" prefWidth="132.0" ripplerFill="#f8f4f4" style="-fx-background-color: #34495E;" text="Guardar" textFill="#f8f6f6">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXPasswordField fx:id="Password" labelFloat="true" layoutX="201.0" layoutY="54.0" prefHeight="31.0" prefWidth="170.0" promptText="Password">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXPasswordField>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

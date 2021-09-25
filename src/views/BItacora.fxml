@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="323.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BitacoraModalController">
+   <children>
+      <VBox prefHeight="379.0" prefWidth="656.0">
+         <children>
+            <Pane prefHeight="129.0" prefWidth="656.0">
+               <children>
+                  <FontAwesomeIconView fx:id="cerrar" glyphName="CLOSE" layoutX="632.0" layoutY="22.0" onMouseClicked="#cerrarclick" size="25" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="81.0" layoutY="-2.0" prefHeight="33.0" prefWidth="438.0" text="Bitacora" textFill="#3c3b3b">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="Buscar" labelFloat="true" layoutX="150.0" layoutY="55.0" onKeyTyped="#buscarTYPE" prefHeight="34.0" prefWidth="357.0" promptText="Buscar N° Cuenta" />
+               </children>
+            </Pane>
+            <TableView fx:id="tableviewsmovi" prefHeight="299.0" prefWidth="656.0">
+              <columns>
+                  <TableColumn fx:id="cuenta" editable="false" prefWidth="100.0" text="CUENTA" />
+                <TableColumn fx:id="descripcion" prefWidth="235.0" text="DESCRIPCION" />
+                  <TableColumn fx:id="accion" prefWidth="102.0" text="ACCION" />
+                  <TableColumn fx:id="importe" prefWidth="116.0" text="IMPORTE" />
+                  <TableColumn fx:id="fecha" minWidth="0.0" prefWidth="89.0" text="FECHA" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

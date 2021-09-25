@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="297.0" prefWidth="473.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModalvistaPermisosController">
+   <children>
+      <VBox layoutX="-1.0" prefHeight="301.0" prefWidth="474.0">
+         <children>
+            <Pane prefHeight="79.0" prefWidth="603.0">
+               <children>
+                  <Label layoutX="135.0" layoutY="24.0" prefHeight="33.0" prefWidth="295.0" text="Permisos de Usuarios">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fx:id="cerrar" glyphName="CLOSE" layoutX="448.0" layoutY="18.0" onMouseClicked="#cerrartabla" size="25" />
+               </children>
+            </Pane>
+            <TableView fx:id="tablepermisos" prefHeight="211.0" prefWidth="440.0">
+              <columns>
+                <TableColumn fx:id="modulos" prefWidth="201.0" text="Modulos" />
+                <TableColumn fx:id="v" prefWidth="66.0" text="V" />
+                  <TableColumn fx:id="c" prefWidth="64.0" text="C" />
+                  <TableColumn fx:id="e" prefWidth="72.0" text="E" />
+                  <TableColumn fx:id="a" prefWidth="70.0" text="A" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

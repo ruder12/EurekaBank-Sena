@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModalGestionCuentasController">
+   <children>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="701.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="labelnombre" cache="true" layoutX="101.0" layoutY="14.0" prefHeight="34.0" prefWidth="304.0" style="-fx-background-color: #CACFD2;" textFill="#78909c">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelDoc" layoutX="76.0" layoutY="61.0" prefHeight="34.0" prefWidth="159.0" style="-fx-background-color: #CACFD2;" textFill="#78909c">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelciudad" layoutX="114.0" layoutY="103.0" prefHeight="34.0" prefWidth="220.0" style="-fx-background-color: #CACFD2;" textFill="#78909c">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelcodigo" layoutX="172.0" layoutY="146.0" prefHeight="34.0" prefWidth="144.0" style="-fx-background-color: #CACFD2;" textFill="#78909c">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="14.0" prefHeight="34.0" prefWidth="64.0" style="-fx-background-color: #78909C;" text="Cliente: " textFill="#f8f5f5">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="61.0" prefHeight="34.0" prefWidth="39.0" style="-fx-background-color: #78909C;" text="D.I:" textFill="#f8f5f5">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="103.0" prefHeight="34.0" prefWidth="76.0" style="-fx-background-color: #78909C;" text="Ciudad: " textFill="#f8f5f5">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="146.0" prefHeight="34.0" prefWidth="129.0" style="-fx-background-color: #78909C;" text="Codigo Cliente:" textFill="#f8f5f5">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <GridPane layoutX="403.0" layoutY="50.0" prefHeight="120.0" prefWidth="291.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="40.99999237060547" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="39.00000762939453" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <JFXButton fx:id="btnApertura" buttonType="RAISED" onAction="#btnAperturaAction" prefHeight="40.0" prefWidth="152.0" styleClass="btnhover" stylesheets="@../EurekaBanck/styles.css" text="Apertura" />
+                        <JFXButton fx:id="btnCancelarCuenta" buttonType="RAISED" onAction="#btnCancelarCuentaAction" prefHeight="40.0" prefWidth="144.0" styleClass="btnhover" stylesheets="@../EurekaBanck/styles.css" text="Cancelar Cuenta" GridPane.columnIndex="1" />
+                        <JFXButton fx:id="btnDeposito" buttonType="RAISED" onAction="#btnDepositoAction" prefHeight="46.0" prefWidth="147.0" styleClass="btnhover" stylesheets="@../EurekaBanck/styles.css" text="Deposito" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="btnRetiro" buttonType="RAISED" onAction="#btnRetiroAction" prefHeight="46.0" prefWidth="144.0" styleClass="btnhover" stylesheets="@../EurekaBanck/styles.css" text="Retiro" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <JFXButton fx:id="btnTranferencia" buttonType="RAISED" onAction="#btnTranferenciaAction" prefHeight="34.0" prefWidth="148.0" styleClass="btnhover" stylesheets="@../EurekaBanck/styles.css" text="Tranferencia" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="btnConsultarMovimiento" buttonType="RAISED" onAction="#btnConsultarMovimientoAction" prefHeight="56.0" prefWidth="141.0" styleClass="btnhover" stylesheets="@../EurekaBanck/styles.css" text="Movimientos" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <opaqueInsets>
+                              <Insets top="1.0" />
+                           </opaqueInsets>
+                        </JFXButton>
+                     </children>
+                  </GridPane>
+                  <Label layoutX="430.0" layoutY="13.0" prefHeight="27.0" prefWidth="249.0" text="Adminitracion de Cuenta" textFill="#5b5757">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="#78909c" glyphName="REFRESH" layoutX="379.0" layoutY="190.0" onMouseClicked="#refresh" size="28" wrappingWidth="23.571427166461945" />
+                  <FontAwesomeIconView glyphName="CLOSE" layoutX="677.0" layoutY="25.0" onMouseClicked="#cerrar" size="30" />
+                  <Label fx:id="tipocliente" layoutX="334.0" layoutY="167.0" prefHeight="27.0" prefWidth="40.0" visible="false" />
+               </children>
+            </Pane>
+            <Label fx:id="LabelNumCuenta" prefHeight="13.0" prefWidth="153.0" visible="false" />
+            <TableView fx:id="tableviewscuentas" prefHeight="231.0" prefWidth="701.0" tableMenuButtonVisible="true">
+              <columns>
+                <TableColumn fx:id="NumCuenta" editable="false" prefWidth="85.0" text="#CUENTA" />
+                  <TableColumn fx:id="moneda" editable="false" prefWidth="70.0" text="MONEDA" />
+                <TableColumn fx:id="sucursal" editable="false" prefWidth="122.0" text="SUCURSAL" />
+                  <TableColumn fx:id="empleado" prefWidth="77.0" text="EMPLEADO" />
+                  <TableColumn fx:id="saldo" prefWidth="106.0" text="SALDO" />
+                  <TableColumn fx:id="fecha" minWidth="0.0" prefWidth="67.0" text="FECHA " />
+                  <TableColumn fx:id="estado" prefWidth="105.0" text="ESTADO" />
+                  <TableColumn fx:id="movimientos" prefWidth="59.0" text="#MOV" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
